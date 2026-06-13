@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXE — Premium Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="loader">
+  <div class="loader-logo">LUX<span>E</span></div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">🛒 Added to cart!</div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">LUX<span>E</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-cart" onclick="toggleCart()">
+      🛍 Cart
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-shape shape-1"></div>
+  <div class="hero-shape shape-2"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">New Collection 2025</div>
+    <h1 class="hero-title">
+      Dress with<br><em>Confidence</em><br>& Style
+    </h1>
+    <p class="hero-subtitle">
+      Curated fashion for every moment — from bold streetwear to timeless classics. Shop the collection that defines you.
+    </p>
+    <div class="hero-cta">
+      <a href="categories.html" class="btn-primary">Shop Now →</a>
+      <a href="about.html" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">12<span>K+</span></div>
+      <div class="stat-label">Products</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98<span>%</span></div>
+      <div class="stat-label">Satisfaction</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50<span>+</span></div>
+      <div class="stat-label">Brands</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Free Shipping over $50 <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">New Arrivals Every Week <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Kids — Men — Women <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Premium Quality Guaranteed <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Easy Returns & Exchanges <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Free Shipping over $50 <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">New Arrivals Every Week <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Kids — Men — Women <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Premium Quality Guaranteed <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Easy Returns & Exchanges <span class="marquee-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ── PRODUCTS ── -->
+<section class="products-section">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Featured Products</div>
+    <h2 class="section-title">All Products</h2>
+    <p class="section-desc">Handpicked styles across every category — dressed for life.</p>
+  </div>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+    <button class="filter-btn" onclick="filterProducts('kids', this)">Kids</button>
+    <button class="filter-btn" onclick="filterProducts('men', this)">Men</button>
+    <button class="filter-btn" onclick="filterProducts('women', this)">Women</button>
+    <button class="filter-btn" onclick="filterProducts('sale', this)">On Sale</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+    <!-- Injected by JS -->
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<section class="newsletter-section">
+  <div class="reveal">
+    <h3>Stay in the Loop</h3>
+    <p>Get exclusive drops, early access, and style tips — right in your inbox.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email address" id="emailInput" />
+      <button class="btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">LUX<span>E</span></span>
+      <p>Premium fashion for every generation. We believe style is for everyone — bold, minimal, or everywhere in between.</p>
+      <div class="footer-social">
+        <a class="social-btn" href="#">𝕏</a>
+        <a class="social-btn" href="#">in</a>
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">Kids</a></li>
+        <li><a href="categories.html">Men</a></li>
+        <li><a href="categories.html">Women</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Sustainability</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LUXE. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

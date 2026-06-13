@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories — LUXE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="loader">
+  <div class="loader-logo">LUX<span>E</span></div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">🛒 Added to cart!</div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">LUX<span>E</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html" class="active">Categories</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-cart" onclick="toggleCart()">
+      🛍 Cart
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="categories-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content" style="max-width:100%;text-align:center;">
+    <div class="hero-eyebrow" style="justify-content:center;">Browse by Category</div>
+    <h1 class="hero-title">Shop Your <em>Style</em></h1>
+    <p class="hero-subtitle" style="max-width:500px;margin:0 auto 0;">
+      Explore handpicked collections across Kids, Men, and Women — something for everyone.
+    </p>
+  </div>
+</div>
+
+<!-- ── CATEGORIES CONTENT ── -->
+<section style="padding:4rem 5%;">
+
+  <!-- Category Tabs -->
+  <div class="cat-tabs reveal">
+    <button class="cat-tab active" onclick="switchCategory('kids', this)">
+      <span class="cat-tab-icon">👦</span>
+      <span class="cat-tab-label">Kids</span>
+      <span class="cat-tab-count">48 items</span>
+    </button>
+    <button class="cat-tab" onclick="switchCategory('men', this)">
+      <span class="cat-tab-icon">👔</span>
+      <span class="cat-tab-label">Men</span>
+      <span class="cat-tab-count">64 items</span>
+    </button>
+    <button class="cat-tab" onclick="switchCategory('women', this)">
+      <span class="cat-tab-icon">👗</span>
+      <span class="cat-tab-label">Women</span>
+      <span class="cat-tab-count">72 items</span>
+    </button>
+  </div>
+
+  <!-- Kids Section -->
+  <div class="category-section visible" id="cat-kids">
+    <div class="category-banner cat-kids-banner reveal">
+      <div class="category-banner-icon">🎒</div>
+      <div class="category-banner-text">
+        <h2>Kids Collection</h2>
+        <p>Fun, durable, and vibrant styles designed for active young ones. From school outfits to weekend adventures.</p>
+      </div>
+    </div>
+    <div class="products-grid" id="kidsGrid"></div>
+  </div>
+
+  <!-- Men Section -->
+  <div class="category-section" id="cat-men">
+    <div class="category-banner cat-men-banner reveal">
+      <div class="category-banner-icon">🕴</div>
+      <div class="category-banner-text">
+        <h2>Men's Collection</h2>
+        <p>Sharp, minimal, and built to last. Elevated essentials and bold statement pieces for the modern man.</p>
+      </div>
+    </div>
+    <div class="products-grid" id="menGrid"></div>
+  </div>
+
+  <!-- Women Section -->
+  <div class="category-section" id="cat-women">
+    <div class="category-banner cat-women-banner reveal">
+      <div class="category-banner-icon">✨</div>
+      <div class="category-banner-text">
+        <h2>Women's Collection</h2>
+        <p>From effortless casuals to runway-inspired looks — discover styles that celebrate confidence.</p>
+      </div>
+    </div>
+    <div class="products-grid" id="womenGrid"></div>
+  </div>
+
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<section class="newsletter-section">
+  <div class="reveal">
+    <h3>Stay in the Loop</h3>
+    <p>Get exclusive drops, early access, and style tips — right in your inbox.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email address" id="emailInput" />
+      <button class="btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">LUX<span>E</span></span>
+      <p>Premium fashion for every generation. Style is for everyone — bold, minimal, or everywhere in between.</p>
+      <div class="footer-social">
+        <a class="social-btn" href="#">𝕏</a>
+        <a class="social-btn" href="#">in</a>
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">Kids</a></li>
+        <li><a href="categories.html">Men</a></li>
+        <li><a href="categories.html">Women</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Sustainability</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LUXE. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

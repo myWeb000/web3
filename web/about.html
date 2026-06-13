@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — LUXE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="loader">
+  <div class="loader-logo">LUX<span>E</span></div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">✓ Message sent!</div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">LUX<span>E</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-cart" onclick="toggleCart()">
+      🛍 Cart
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── ABOUT HERO ── -->
+<div class="about-hero">
+  <div class="hero-bg" style="background: radial-gradient(ellipse 80% 70% at 30% 60%, rgba(215,38,56,0.18) 0%, transparent 70%), var(--black);"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-shape shape-1"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Our Story</div>
+    <h1 class="hero-title">Fashion that<br><em>Moves</em> You</h1>
+    <p class="hero-subtitle">Founded in 2018, LUXE has been redefining what modern fashion means — merging artistry with accessibility for every person, every style.</p>
+    <div class="hero-cta">
+      <a href="categories.html" class="btn-primary">Shop Now →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT SPLIT ── -->
+<section style="padding:6rem 5%;">
+  <div class="about-split">
+    <div class="about-img-wrap reveal">
+      <!-- Placeholder art using SVG gradient -->
+      <svg width="100%" height="100%" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="imgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a0a0d"/>
+            <stop offset="50%" style="stop-color:#2d1015"/>
+            <stop offset="100%" style="stop-color:#0d0d0d"/>
+          </linearGradient>
+          <radialGradient id="rGrad" cx="60%" cy="40%">
+            <stop offset="0%" style="stop-color:rgba(215,38,56,0.3)"/>
+            <stop offset="100%" style="stop-color:transparent"/>
+          </radialGradient>
+        </defs>
+        <rect width="400" height="500" fill="url(#imgGrad)"/>
+        <rect width="400" height="500" fill="url(#rGrad)"/>
+        <text x="50%" y="45%" text-anchor="middle" font-family="Georgia,serif" font-size="100" fill="rgba(215,38,56,0.15)">L</text>
+        <text x="50%" y="62%" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="rgba(255,255,255,0.3)" letter-spacing="8">LUXE</text>
+        <text x="50%" y="70%" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="rgba(255,255,255,0.15)" letter-spacing="3">EST. 2018</text>
+      </svg>
+      <div class="about-img-badge">
+        <div class="num">7</div>
+        <div class="lbl">Years of<br>Excellence</div>
+      </div>
+    </div>
+
+    <div class="about-text reveal reveal-delay-2">
+      <div class="section-eyebrow">Who We Are</div>
+      <h2>Built on the belief that <em style="color:var(--red);font-style:normal;">style has no limits</em></h2>
+      <p>LUXE started as a small boutique in 2018 with a single idea: everyone deserves access to clothing that makes them feel confident, comfortable, and uniquely themselves.</p>
+      <p>From our first 50-item catalog to a curated collection of 12,000+ products across kids, men, and women — we've grown, but our mission hasn't changed. We source responsibly, design purposefully, and sell honestly.</p>
+      <p>Today, LUXE ships to 40+ countries, partners with over 50 independent designers, and is worn by over 1 million customers worldwide.</p>
+
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="feature-icon">🌍</div>
+          <div class="feature-text">
+            <strong>Global Reach</strong>
+            <span>Ships to 40+ countries</span>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">♻️</div>
+          <div class="feature-text">
+            <strong>Sustainable</strong>
+            <span>Ethically sourced materials</span>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">🏆</div>
+          <div class="feature-text">
+            <strong>Award Winning</strong>
+            <span>Fashion Brand of Year 2024</span>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">💬</div>
+          <div class="feature-text">
+            <strong>24/7 Support</strong>
+            <span>Real humans, real fast</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="categories.html" class="btn-primary">Explore Collections →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUES ── -->
+<section style="padding:5rem 5%;background:var(--black-2);">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">What We Stand For</div>
+    <h2 class="section-title">Our Values</h2>
+    <p class="section-desc">Every thread of our brand is woven with intention.</p>
+  </div>
+
+  <div class="values-grid">
+    <div class="value-card reveal reveal-delay-1">
+      <div class="value-icon">🎨</div>
+      <div class="value-title">Creative Expression</div>
+      <div class="value-desc">Fashion is art. We celebrate designers who push boundaries and customers who wear their truth.</div>
+    </div>
+    <div class="value-card reveal reveal-delay-2">
+      <div class="value-icon">🤝</div>
+      <div class="value-title">Inclusivity</div>
+      <div class="value-desc">From age 2 to 82, small to tall — our styles are built for every body and every identity.</div>
+    </div>
+    <div class="value-card reveal reveal-delay-3">
+      <div class="value-icon">🌱</div>
+      <div class="value-title">Sustainability</div>
+      <div class="value-desc">We partner only with manufacturers who share our commitment to ethical production and environmental care.</div>
+    </div>
+    <div class="value-card reveal reveal-delay-4">
+      <div class="value-icon">⚡</div>
+      <div class="value-title">Quality First</div>
+      <div class="value-desc">Every product passes our 12-point quality check. If it wouldn't last, it doesn't ship.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section class="team-section" style="padding:5rem 5%;">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">The People Behind LUXE</div>
+    <h2 class="section-title">Meet the Team</h2>
+    <p class="section-desc">Designers, curators, and dreamers — united by a love for fashion.</p>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card reveal reveal-delay-1">
+      <div class="team-img">
+        <svg width="100%" height="100%" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="200" fill="#1a0a0d"/>
+          <circle cx="110" cy="72" r="38" fill="#2d1015"/>
+          <rect x="55" y="126" width="110" height="80" rx="55" fill="#2d1015"/>
+          <circle cx="110" cy="72" r="28" fill="rgba(215,38,56,0.25)"/>
+          <text x="110" y="82" text-anchor="middle" font-size="30" fill="rgba(215,38,56,0.6)">SA</text>
+        </svg>
+      </div>
+      <div class="team-name">Sara Akhtar</div>
+      <div class="team-role">Creative Director</div>
+    </div>
+    <div class="team-card reveal reveal-delay-2">
+      <div class="team-img">
+        <svg width="100%" height="100%" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="200" fill="#0a0d1a"/>
+          <circle cx="110" cy="72" r="38" fill="#0f1530"/>
+          <rect x="55" y="126" width="110" height="80" rx="55" fill="#0f1530"/>
+          <circle cx="110" cy="72" r="28" fill="rgba(80,100,215,0.25)"/>
+          <text x="110" y="82" text-anchor="middle" font-size="30" fill="rgba(100,130,255,0.6)">AK</text>
+        </svg>
+      </div>
+      <div class="team-name">Ali Khan</div>
+      <div class="team-role">Head of Buying</div>
+    </div>
+    <div class="team-card reveal reveal-delay-3">
+      <div class="team-img">
+        <svg width="100%" height="100%" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="200" fill="#1a0a15"/>
+          <circle cx="110" cy="72" r="38" fill="#2d0f25"/>
+          <rect x="55" y="126" width="110" height="80" rx="55" fill="#2d0f25"/>
+          <circle cx="110" cy="72" r="28" fill="rgba(215,38,120,0.25)"/>
+          <text x="110" y="82" text-anchor="middle" font-size="30" fill="rgba(215,80,160,0.6)">MR</text>
+        </svg>
+      </div>
+      <div class="team-name">Maria Rehman</div>
+      <div class="team-role">Lead Stylist</div>
+    </div>
+    <div class="team-card reveal reveal-delay-4">
+      <div class="team-img">
+        <svg width="100%" height="100%" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="200" fill="#0a100a"/>
+          <circle cx="110" cy="72" r="38" fill="#0f1f0f"/>
+          <rect x="55" y="126" width="110" height="80" rx="55" fill="#0f1f0f"/>
+          <circle cx="110" cy="72" r="28" fill="rgba(38,180,80,0.25)"/>
+          <text x="110" y="82" text-anchor="middle" font-size="30" fill="rgba(60,200,100,0.6)">UF</text>
+        </svg>
+      </div>
+      <div class="team-name">Usman Farooq</div>
+      <div class="team-role">Tech Lead</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<div class="contact-strip reveal">
+  <h2>Ready to redefine your wardrobe?</h2>
+  <p>Shop our latest collections or get in touch — we'd love to hear from you.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="categories.html" class="btn-outline" style="border-color:rgba(255,255,255,0.4);">Browse Collections</a>
+    <button class="btn-outline" style="border-color:rgba(255,255,255,0.4);" onclick="showToast('Message sent! We will be in touch soon.')">Contact Us</button>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">LUX<span>E</span></span>
+      <p>Premium fashion for every generation. Style is for everyone — bold, minimal, or everywhere in between.</p>
+      <div class="footer-social">
+        <a class="social-btn" href="#">𝕏</a>
+        <a class="social-btn" href="#">in</a>
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="categories.html">Kids</a></li>
+        <li><a href="categories.html">Men</a></li>
+        <li><a href="categories.html">Women</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Sustainability</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 LUXE. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
